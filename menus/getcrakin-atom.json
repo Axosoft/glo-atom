@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle getcrakin-atom",
+        "command": "getcrakin-atom:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "getcrakin-atom",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "getcrakin-atom:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
