@@ -12,6 +12,9 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "deserializers": {
+    "GetcrakinAtomView": "deserializeView"
+  },
   "dependencies": {
     "getcrakin-shared": "1.0.0",
     "react": "^15.5.4",
