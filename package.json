@@ -4,13 +4,17 @@
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "getcrakin-atom:toggle"
-  },
   "repository": "https://github.com/atom/getcrakin-atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
   },
   "deserializers": {
     "GetcrakinAtomView": "deserializeView"

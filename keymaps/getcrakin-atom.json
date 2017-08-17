@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "getcrakin-atom:toggle"
+    "ctrl-alt-g": "getcrakin-atom:toggle"
   }
 }
