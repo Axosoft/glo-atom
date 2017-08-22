@@ -4,5 +4,30 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
+@shared-styles-icons-path: "atom://getcrakin-atom/node_modules/getcrakin-shared/node_modules/gitkraken-shared-styles/icons";
+@fa-font-path: "@{shared-styles-icons-path}/font-awesome/fonts";
+@zmdi-font-path: "@{shared-styles-icons-path}/material-design-iconic-font/dist/fonts";
+
+@font-face {
+  font-family: 'Font Awesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url('@{fa-font-path}/fontawesome-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Material Design Iconic Font';
+  font-weight: normal;
+  font-style: normal;
+  src: url('@{zmdi-font-path}/Material-Design-Iconic-Font.woff') format('woff');
+}
+
 .getcrakin-atom {
+  .fa {
+    font-family: 'Font Awesome'
+  }
+
+  .zmdi {
+    font-family: 'Material Design Iconic Font';
+  }
 }
