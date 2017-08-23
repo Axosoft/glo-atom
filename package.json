@@ -1,5 +1,5 @@
 {
-  "name": "getcrakin-atom",
+  "name": "glo-atom-dev",
   "main": "./lib/getcrakin-atom",
   "version": "0.0.0",
   "description": "A short description of your package",
@@ -20,7 +20,6 @@
     "GetcrakinAtomView": "deserializeView"
   },
   "dependencies": {
-    "getcrakin-shared": "1.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   }
