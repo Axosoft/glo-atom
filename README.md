@@ -1,4 +1,5 @@
-# getcrakin-atom package
+# glo-atom package
+[![Build Status](https://jenkins2.axosoft.com/buildStatus/icon?job=GitKraken/glo-atom/dev)](https://jenkins2.axosoft.com/job/GitKraken/glo-atom/dev)  
 
 A short description of your package.
 
