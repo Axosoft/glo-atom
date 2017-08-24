@@ -38,7 +38,7 @@ def build_atom(configuration) {
   sh 'mv README.md zip/README.md'
 
   // create zip file
-  sh "zip -r ${fileName} zip"
+  sh "zip -r ${fileName} zip/*"
   // zip dir: "zip", zipFile: "glo-atom-${configuration}.zip", archive: true
 
   // archive artifact
