@@ -19,10 +19,6 @@ node('centos') {
     // load script
     def build = load "./build/shared/build.groovy"
 
-    stage("Build shared UI") {
-      build.build_shared_ui(configuration)
-    }
-
     def fileName
     stage("Build ${target}") {
       fileName = build.build_atom(configuration)
