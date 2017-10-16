@@ -2,7 +2,7 @@ def build_atom(configuration) {
   def fileName = "glo-atom-${configuration}.zip"
 
   // copy config file from Jenkins
-  configFileProvider([configFile(fileId: 'glo-atom-dev-config', variable: 'GLO_ATOM_CONFIG_PATH')]) {
+  configFileProvider([configFile(fileId: "glo-atom-${configuration}-config", variable: 'GLO_ATOM_CONFIG_PATH')]) {
     sh "cat $GLO_ATOM_CONFIG_PATH > config.json"
   }
 
