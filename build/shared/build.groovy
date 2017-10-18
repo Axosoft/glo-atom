@@ -7,7 +7,7 @@ def build_atom(configuration) {
   }
 
   if (configuration == 'dev' || configuration == 'staging') {
-    sh "sed -i -e 's/\"name\": \"glo-atom\"/\"name\": \"glo-atom-${configuration}\"' config.json"
+    sh "sed -i -e 's/\"name\": \"glo-atom\"/\"name\": \"glo-atom-${configuration}\"/' config.json"
   }
 
   // move all necessary files/folder to
