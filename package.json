@@ -1,10 +1,10 @@
 {
   "name": "glo-atom-dev",
-  "main": "./lib/getcrakin-atom",
+  "main": "./lib/glo-atom",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
-  "repository": "https://github.com/atom/getcrakin-atom",
+  "repository": "https://github.com/Axosoft/GetCrackinAtom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -17,7 +17,7 @@
     }
   },
   "deserializers": {
-    "GetcrakinAtomView": "deserializeView"
+    "GloAtomView": "deserializeView"
   },
   "dependencies": {}
 }
