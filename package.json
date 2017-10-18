@@ -1,5 +1,5 @@
 {
-  "name": "glo-atom-dev",
+  "name": "glo-atom",
   "main": "./lib/glo-atom",
   "version": "0.0.0",
   "description": "A short description of your package",

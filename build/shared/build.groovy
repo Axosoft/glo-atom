@@ -6,6 +6,10 @@ def build_atom(configuration) {
     sh "cat $GLO_ATOM_CONFIG_PATH > config.json"
   }
 
+  if (configuration == 'dev' || configuration == 'staging') {
+    sh "sed -i -e 's/\"name\": \"glo-atom\"/\"name\": \"glo-atom-${configuration}\"' config.json"
+  }
+
   // move all necessary files/folder to
   sh 'mkdir zip'
   sh 'mv keymaps zip/keymaps'
