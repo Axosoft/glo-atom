@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle getcrakin-atom",
-        "command": "getcrakin-atom:toggle"
+        "label": "Toggle Glo",
+        "command": "glo-atom:toggle"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "getcrakin-atom",
+          "label": "Glo",
           "submenu": [
             {
               "label": "Toggle",
-              "command": "getcrakin-atom:toggle"
+              "command": "glo-atom:toggle"
             }
           ]
         }
