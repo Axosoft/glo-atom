@@ -3,7 +3,7 @@ def build_atom(configuration) {
 
   // copy config file from Jenkins
   configFileProvider([configFile(fileId: "glo-atom-${configuration}-config", variable: 'GLO_ATOM_CONFIG_PATH')]) {
-    sh "cat $GLO_ATOM_CONFIG_PATH > config.json"
+    sh "cat $GLO_ATOM_CONFIG_PATH > lib/config.json"
   }
 
   if (configuration == 'dev' || configuration == 'staging') {
@@ -16,7 +16,6 @@ def build_atom(configuration) {
   sh 'mv lib zip/lib'
   sh 'mv menus zip/menus'
   sh 'mv styles zip/styles'
-  sh 'mv config.json zip/config.json'
   sh 'mv package.json zip/package.json'
   sh 'mv LICENSE.md zip/LICENSE.md'
   sh 'mv README.md zip/README.md'
