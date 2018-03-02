@@ -2,9 +2,16 @@
   "name": "glo-atom",
   "main": "./lib/glo-atom",
   "version": "0.1.1",
-  "description": "A short description of your package",
-  "keywords": [],
-  "repository": "https://github.com/Axosoft/GetCrackinAtom",
+  "author": "Axosoft, LLC",
+  "description": "IN CLOSED BETA. Open GitKraken Glo as an Atom tab.",
+  "keywords": [
+    "glo",
+    "tasks",
+    "todo",
+    "issues",
+    "issue tracker"
+  ],
+  "repository": "https://github.com/Axosoft/glo-atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
