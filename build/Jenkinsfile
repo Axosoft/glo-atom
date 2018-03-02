@@ -1,19 +1,17 @@
 #!groovy
 
 def _configuration = "dev"
-def _dockerTag = "dev"
 
 if (env.JOB_NAME =~ /Production/) {
   _configuration = "production"
-  _dockerTag = "release"
 }
 if (env.JOB_NAME =~ /Staging/) {
   _configuration = "staging"
-  _dockerTag = "staging"
 }
 
 gloPipeline {
   target = "Glo Atom"
+  configuration = _configuration
   slackChannel = "#axo-dev-stream"
   skipDocker = true
 
@@ -42,7 +40,7 @@ gloPipeline {
 
     // create zip file
     def fileName = "${dirName}.zip"
-    sh "zip -r ${fileName} zip/*"
+    sh "zip -r ${fileName} ${dirName}/*"
 
     // archive artifact
     archiveArtifacts artifacts: fileName
