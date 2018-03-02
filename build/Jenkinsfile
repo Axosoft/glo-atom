@@ -25,7 +25,7 @@ gloPipeline {
     }
 
     if (configuration == 'dev' || configuration == 'staging') {
-      sh "sed -i -e 's/\"name\": \"glo-atom\"/\"name\": \"glo-atom-${configuration}\"/' package.json"
+      sh "sed -i -e 's/\"name\": \"gitkraken-glo\"/\"name\": \"gitkraken-glo-${configuration}\"/' package.json"
     }
 
     // move all necessary files/folder to
