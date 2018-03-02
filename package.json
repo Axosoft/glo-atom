@@ -1,7 +1,7 @@
 {
   "name": "gitkraken-glo",
   "main": "./lib/glo-atom",
-  "version": "0.1.1",
+  "version": "1.0.0-rc",
   "author": "Axosoft, LLC",
   "description": "IN CLOSED BETA. Open GitKraken Glo as an Atom tab.",
   "keywords": [
