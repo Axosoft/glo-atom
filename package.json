@@ -1,5 +1,5 @@
 {
-  "name": "glo-atom",
+  "name": "gitkraken-glo",
   "main": "./lib/glo-atom",
   "version": "0.1.1",
   "author": "Axosoft, LLC",
