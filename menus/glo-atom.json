@@ -1,12 +1,4 @@
 {
-  "context-menu": {
-    "atom-text-editor": [
-      {
-        "label": "Toggle Glo",
-        "command": "glo-atom:toggle"
-      }
-    ]
-  },
   "menu": [
     {
       "label": "Packages",
@@ -15,8 +7,8 @@
           "label": "Glo",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "glo-atom:toggle"
+              "label": "Open",
+              "command": "glo:open"
             }
           ]
         }
