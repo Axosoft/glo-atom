@@ -1,0 +1,50 @@
+#!groovy
+
+def _configuration = "dev"
+
+if (env.JOB_NAME =~ /Production/) {
+  _configuration = "production"
+}
+if (env.JOB_NAME =~ /Staging/) {
+  _configuration = "staging"
+}
+
+gloPipeline {
+  target = "Glo Atom"
+  configuration = _configuration
+  slackChannel = "#axo-dev-stream"
+  skipDocker = true
+
+  buildScript = {
+
+    // copy config file from Jenkins
+    configFileProvider([configFile(fileId: "glo-atom-${configuration}-config", variable: 'GLO_ATOM_CONFIG_PATH')]) {
+      sh "cat $GLO_ATOM_CONFIG_PATH > lib/config.json"
+    }
+
+    if (configuration == 'dev' || configuration == 'staging') {
+      sh "sed -i -e 's/\"name\": \"gitkraken-glo\"/\"name\": \"gitkraken-glo-${configuration}\"/' package.json"
+    }
+
+    // move all necessary files/folder to
+    def dirName = "glo-atom-${configuration}"
+    sh "mkdir ${dirName}"
+    sh "mv keymaps ${dirName}/keymaps"
+    sh "mv lib ${dirName}/lib"
+    sh "mv menus ${dirName}/menus"
+    sh "mv styles ${dirName}/styles"
+    sh "mv package.json ${dirName}/package.json"
+    sh "mv CHANGELOG.md ${dirName}/CHANGELOG.md"
+    sh "mv LICENSE.md ${dirName}/LICENSE.md"
+    sh "mv README.md ${dirName}/README.md"
+
+    // create zip file
+    def fileName = "${dirName}.zip"
+    sh "zip -r ${fileName} ${dirName}/*"
+
+    // archive artifact
+    archiveArtifacts artifacts: fileName
+
+    return fileName
+  }
+}

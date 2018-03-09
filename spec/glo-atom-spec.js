@@ -15,7 +15,7 @@ describe('GloAtom', () => {
     activationPromise = atom.packages.activatePackage('glo-atom');
   });
 
-  describe('when the glo-atom:toggle event is triggered', () => {
+  describe('when the glo:open event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
@@ -23,7 +23,7 @@ describe('GloAtom', () => {
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'glo-atom:toggle');
+      atom.commands.dispatch(workspaceElement, 'glo:open');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -37,7 +37,7 @@ describe('GloAtom', () => {
 
         let gloAtomPanel = atom.workspace.panelForItem(gloAtomElement);
         expect(gloAtomPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'glo-atom:toggle');
+        atom.commands.dispatch(workspaceElement, 'glo:open');
         expect(gloAtomPanel.isVisible()).toBe(false);
       });
     });
@@ -55,7 +55,7 @@ describe('GloAtom', () => {
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'glo-atom:toggle');
+      atom.commands.dispatch(workspaceElement, 'glo:open');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -65,7 +65,7 @@ describe('GloAtom', () => {
         // Now we can test for view visibility
         let gloAtomElement = workspaceElement.querySelector('.glo-atom');
         expect(gloAtomElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'glo-atom:toggle');
+        atom.commands.dispatch(workspaceElement, 'glo:open');
         expect(gloAtomElement).not.toBeVisible();
       });
     });

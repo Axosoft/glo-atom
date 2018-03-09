@@ -1,10 +1,12 @@
-# glo-atom package
-[![Build Status](https://jenkins2.axosoft.com/buildStatus/icon?job=GitKraken/glo-atom/dev)](https://jenkins2.axosoft.com/job/GitKraken/glo-atom/dev)  
+# GitKraken Glo for Atom
 
-A short description of your package.
+This package allows you to open GitKraken Glo as a tab in Atom.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+⚠️ Closed Beta Notice: If you are currently not in the Glo Beta you will not be able to use this plugin.
 
-## Setting up / development
-1. Copy `config-template.json` into `config.json` and fill in the appUrl.
-2. Run `apm link` inside the repo folder.
+![Glo inside Atom](https://user-images.githubusercontent.com/899916/36920216-328dfcf0-1e1d-11e8-8275-ac511a0f5783.png)
+
+## Different ways to open:
+- Click on the `Glo` button that this package adds to your status bar.
+- Search for `Glo` in the command palette.
+- Use the keyboard shortcut: `ctrl + alt + g`
