@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.1
 * Fixed an issue where the Glo tab would go blank when user would split the tab
 
 ## 1.0.0
