@@ -3,7 +3,7 @@
   "main": "./lib/glo-atom",
   "version": "1.0.1-rc",
   "author": "Axosoft, LLC",
-  "description": "IN CLOSED BETA. Open GitKraken Glo as an Atom tab.",
+  "description": "An issue board for tracking issues and tasks.",
   "keywords": [
     "glo",
     "gitkraken",
