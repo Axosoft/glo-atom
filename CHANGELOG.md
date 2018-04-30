@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+* Updated package description and details
+* Fixed an issue where the Glo tab would go blank when user would split the tab
+
 ## 1.0.0
 * Renamed package to gitkraken-glo
 * Renamed Toggle command to Open

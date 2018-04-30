@@ -2,9 +2,6 @@
 
 def _configuration = "dev"
 
-if (env.JOB_NAME =~ /Production/) {
-  _configuration = "production"
-}
 if (env.JOB_NAME =~ /Staging/) {
   _configuration = "staging"
 }
@@ -22,9 +19,8 @@ gloPipeline {
       sh "cat $GLO_ATOM_CONFIG_PATH > lib/config.json"
     }
 
-    if (configuration == 'dev' || configuration == 'staging') {
-      sh "sed -i -e 's/\"name\": \"gitkraken-glo\"/\"name\": \"gitkraken-glo-${configuration}\"/' package.json"
-    }
+    // append configuration to the package name (so you can have multiple configurations installed at once)
+    sh "sed -i -e 's/\"name\": \"gitkraken-glo\"/\"name\": \"gitkraken-glo-${configuration}\"/' package.json"
 
     // move all necessary files/folder to
     def dirName = "glo-atom-${configuration}"
