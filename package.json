@@ -3,14 +3,15 @@
   "main": "./lib/glo-atom",
   "version": "1.0.1",
   "author": "Axosoft, LLC",
-  "description": "An issue board for tracking issues and tasks.",
+  "description": "Kanban boards for issue & task tracking.",
   "keywords": [
+    "issue tracker",
+    "task tracker",
+    "issue board",
+    "project management",
+    "kanban",
     "glo",
-    "gitkraken",
-    "tasks",
-    "todo",
-    "issues",
-    "issue tracker"
+    "gitkraken"
   ],
   "repository": "https://github.com/Axosoft/glo-atom",
   "license": "MIT",
